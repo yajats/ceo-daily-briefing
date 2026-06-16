@@ -2,6 +2,9 @@
 
 An AI-powered morning briefing dashboard built for **Aonic** — synthesizing sales, inventory, and customer support data into actionable executive insights.
 
+Photo:
+<img width="3024" height="3952" alt="image" src="https://github.com/user-attachments/assets/e0694900-90ea-42cf-8f86-5d7f8007d282" />
+
 ## What It Does
 
 Every morning, the system analyzes three data sources and generates:
