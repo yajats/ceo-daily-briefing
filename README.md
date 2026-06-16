@@ -24,9 +24,9 @@ Every morning, the system analyzes three data sources and generates:
 
 ## Quick Start
 
-Download the code
-Open a terminal and use ```cd ceo-daily-briefing``` to go to the folder
-Run the following in the terminal:
+1. Download the code
+2. Open a terminal and use ```cd ceo-daily-briefing``` to go to the folder
+3. Run the following in the terminal:
 
 ```bash
 npm install
