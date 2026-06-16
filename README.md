@@ -65,7 +65,3 @@ In production, this engine would run on a cron schedule (e.g. 7:00 AM PT) and op
 - Schedule daily generation with Vercel Cron or AWS EventBridge
 - Email/Slack delivery to leadership team
 - Historical briefing archive
-
-## Built For
-
-Portfolio project demonstrating AI automation capabilities for the **AI Automation Intern — Summer 2026** role at Aonic.
