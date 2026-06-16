@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CEO Daily Briefing Dashboard
 
-## Getting Started
+An AI-powered morning briefing dashboard built for **Aonic** — synthesizing sales, inventory, and customer support data into actionable executive insights.
 
-First, run the development server:
+## What It Does
+
+Every morning, the system analyzes three data sources and generates:
+
+- **Key metrics** — weekly revenue, daily revenue, open tickets, AOV
+- **Problems requiring attention** — spikes in complaints, quality escalations, unresolved high-priority tickets
+- **Inventory risks** — projected stockouts with days-until-runout
+- **Revenue trends** — 6-week chart with week-over-week change
+- **Suggested actions** — prioritized recommendations with owners
+
+### Example Output
+
+> Inventory of Aonic Daily Greens may run out in 9 days.  
+> Customer complaints increased 17% this week.  
+> Revenue grew 12% week-over-week.
+
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── data/                    # Mock data (sales, inventory, support tickets)
+├── lib/
+│   ├── briefing-engine.ts   # Analytics + AI-style insight generation
+│   └── types.ts
+├── app/api/briefing/        # REST endpoint for daily briefing
+└── components/              # Dashboard UI
+```
 
-## Learn More
+### Data Inputs
 
-To learn more about Next.js, take a look at the following resources:
+| Source | File | Fields |
+|--------|------|--------|
+| Sales | `sales.json` | date, product, units, revenue, channel |
+| Inventory | `inventory.json` | SKU, units on hand, reorder point, lead time, velocity |
+| Support | `support-tickets.json` | category, priority, status, subject |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Briefing Engine
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The `generateDailyBriefing()` function in `briefing-engine.ts`:
 
-## Deploy on Vercel
+1. Computes week-over-week revenue and ticket volume changes
+2. Projects inventory runway (days until stockout)
+3. Flags critical attention items based on thresholds
+4. Generates prioritized suggested actions with rationale
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+In production, this engine would run on a cron schedule (e.g. 7:00 AM PT) and optionally call an LLM to enrich narrative summaries.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Production Extensions
+
+- Connect real data via Shopify, warehouse WMS, and Zendesk APIs
+- Add OpenAI/Anthropic for natural-language executive summaries
+- Schedule daily generation with Vercel Cron or AWS EventBridge
+- Email/Slack delivery to leadership team
+- Historical briefing archive
+
+## Built For
+
+Portfolio project demonstrating AI automation capabilities for the **AI Automation Intern — Summer 2026** role at Aonic.

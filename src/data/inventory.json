@@ -1,0 +1,52 @@
+[
+  {
+    "productId": "aonic-hydrate",
+    "productName": "Aonic Hydrate+",
+    "sku": "AH-HYD-12",
+    "unitsOnHand": 3200,
+    "unitsReserved": 280,
+    "reorderPoint": 800,
+    "leadTimeDays": 14,
+    "avgDailySales": 198
+  },
+  {
+    "productId": "aonic-protein",
+    "productName": "Aonic Protein Bar",
+    "sku": "AH-PRB-24",
+    "unitsOnHand": 1680,
+    "unitsReserved": 180,
+    "reorderPoint": 600,
+    "leadTimeDays": 10,
+    "avgDailySales": 142
+  },
+  {
+    "productId": "aonic-greens",
+    "productName": "Aonic Daily Greens",
+    "sku": "AH-GRN-30",
+    "unitsOnHand": 527,
+    "unitsReserved": 95,
+    "reorderPoint": 400,
+    "leadTimeDays": 12,
+    "avgDailySales": 48
+  },
+  {
+    "productId": "aonic-recovery",
+    "productName": "Aonic Recovery Mix",
+    "sku": "AH-RCV-15",
+    "unitsOnHand": 680,
+    "unitsReserved": 40,
+    "reorderPoint": 250,
+    "leadTimeDays": 18,
+    "avgDailySales": 34
+  },
+  {
+    "productId": "aonic-sleep",
+    "productName": "Aonic Sleep Support",
+    "sku": "AH-SLP-60",
+    "unitsOnHand": 890,
+    "unitsReserved": 60,
+    "reorderPoint": 300,
+    "leadTimeDays": 21,
+    "avgDailySales": 22
+  }
+]
