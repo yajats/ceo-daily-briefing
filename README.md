@@ -1,6 +1,6 @@
 # Mock CEO Daily Briefing Dashboard
 
-An AI-powered morning briefing dashboard built for **Aonic** — synthesizing sales, inventory, and customer support data into actionable executive insights.
+An AI-powered morning briefing dashboard built for Aonic (synthesizing sales, inventory, and customer support data into actionable executive insights)
 
 Image of the web UI:
 
